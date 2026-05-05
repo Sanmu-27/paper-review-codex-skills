@@ -1,0 +1,4 @@
+interface:
+  display_name: "Artifact Release Auditor"
+  short_description: "Check research artifacts before release."
+  default_prompt: "Use $artifact-release-auditor to inspect this research artifact for reproducibility, release hygiene, anonymity, and paper-alignment risks."

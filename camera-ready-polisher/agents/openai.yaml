@@ -1,0 +1,4 @@
+interface:
+  display_name: "Camera-Ready Polisher"
+  short_description: "Final-pass checks for research papers."
+  default_prompt: "Use $camera-ready-polisher to audit this final paper/source package for camera-ready risks, consistency, and exact last edits."

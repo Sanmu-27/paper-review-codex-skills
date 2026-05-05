@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Rebuttal Strategist"
+  short_description: "Plan concise, evidence-based paper rebuttals."
+  default_prompt: "Use $paper-rebuttal-strategist to triage these reviews, identify decision-critical concerns, plan evidence, and draft a concise rebuttal."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Paper Review"
+  short_description: "Full NeurIPS-style ML paper review."
+  default_prompt: "Use $ai-paper-review to review this ML paper like a rigorous NeurIPS/ICML reviewer: inspect source/PDF/checklist/bibliography/figures/artifact when available, identify central claims, hard blockers, likely reviewer attacks, score, confidence, and P0/P1/P2 fixes."

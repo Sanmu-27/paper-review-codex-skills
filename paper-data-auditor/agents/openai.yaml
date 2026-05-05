@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Data Auditor"
+  short_description: "Check paper data against internal logic and external literature."
+  default_prompt: "Use $paper-data-auditor to audit this paper's numbers, tables, claims, and artifact consistency."
