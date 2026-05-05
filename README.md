@@ -30,6 +30,12 @@ Use $ai-paper-review to review this paper like a rigorous NeurIPS reviewer.
 
 Each skill is self-contained and includes its own `SKILL.md`. Some skills include scripts or reference checklists that Codex can load or run when useful.
 
+## Repo Extras
+
+- [`examples/`](./examples) contains sample prompts and a synthetic output excerpt.
+- [`scripts/validate_skills.py`](./scripts/validate_skills.py) checks basic skill metadata and prompt wiring.
+- [`.github/workflows/validate.yml`](./.github/workflows/validate.yml) runs validation and script compilation on every push and pull request.
+
 ## Suggested Workflow
 
 1. Use `ai-paper-review` for the broad conference-style review.
