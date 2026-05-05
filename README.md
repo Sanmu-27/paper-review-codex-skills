@@ -1,5 +1,7 @@
 # Paper Review Skills For Agents
 
+[![Validate skills](https://github.com/Sanmu-27/paper-review-codex-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/Sanmu-27/paper-review-codex-skills/actions/workflows/validate.yml)
+
 A portable skill pack for reviewing, stress-testing, and polishing ML/AI research papers across Codex, ChatGPT, Claude, Cursor-style coding agents, and other assistant systems.
 
 The core format is Codex skills, but the repository also includes cross-agent adapters, reusable prompts, examples, and lightweight evals. The goal is practical paper work rather than generic summarization: conference-style review, experimental number auditing, rebuttal planning, artifact release checks, and camera-ready cleanup.
