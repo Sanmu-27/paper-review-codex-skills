@@ -1,8 +1,8 @@
-# Paper Review Skills for Codex
+# Paper Review Skills For Agents
 
-A small collection of Codex skills for reviewing, stress-testing, and polishing ML/AI research papers.
+A portable skill pack for reviewing, stress-testing, and polishing ML/AI research papers across Codex, ChatGPT, Claude, Cursor-style coding agents, and other assistant systems.
 
-These skills are designed for practical paper work rather than generic summarization: conference-style review, experimental number auditing, rebuttal planning, artifact release checks, and camera-ready cleanup.
+The core format is Codex skills, but the repository also includes cross-agent adapters, reusable prompts, examples, and lightweight evals. The goal is practical paper work rather than generic summarization: conference-style review, experimental number auditing, rebuttal planning, artifact release checks, and camera-ready cleanup.
 
 ## Skills
 
@@ -15,6 +15,8 @@ These skills are designed for practical paper work rather than generic summariza
 | `camera-ready-polisher` | Final pass for accepted or near-final papers: claims, checklist, captions, LaTeX/source package, and upload risks. |
 
 ## Install
+
+### Codex
 
 Copy any skill folder into your Codex skills directory:
 
@@ -30,9 +32,23 @@ Use $ai-paper-review to review this paper like a rigorous NeurIPS reviewer.
 
 Each skill is self-contained and includes its own `SKILL.md`. Some skills include scripts or reference checklists that Codex can load or run when useful.
 
+### Other Agents
+
+Use the files in [`adapters/`](./adapters):
+
+- paste [`adapters/universal-agent-instructions.md`](./adapters/universal-agent-instructions.md) into a system prompt or project instruction field
+- use [`adapters/chatgpt-instructions.md`](./adapters/chatgpt-instructions.md) for ChatGPT projects or custom GPTs
+- use [`adapters/claude-project-instructions.md`](./adapters/claude-project-instructions.md) for Claude projects
+- use [`adapters/coding-agent-rules.md`](./adapters/coding-agent-rules.md) for repo-based coding agents
+
+Then choose a task prompt from [`prompts/`](./prompts).
+
 ## Repo Extras
 
 - [`examples/`](./examples) contains sample prompts and a synthetic output excerpt.
+- [`prompts/`](./prompts) contains portable task prompts.
+- [`adapters/`](./adapters) contains instructions for non-Codex agents.
+- [`evals/`](./evals) contains lightweight fixtures and a 20-point scoring rubric.
 - [`scripts/validate_skills.py`](./scripts/validate_skills.py) checks basic skill metadata and prompt wiring.
 - [`.github/workflows/validate.yml`](./.github/workflows/validate.yml) runs validation and script compilation on every push and pull request.
 
@@ -49,3 +65,15 @@ Each skill is self-contained and includes its own `SKILL.md`. Some skills includ
 - The scripts are conservative scanners. Treat their findings as leads for expert review, not proof of paper flaws.
 - When current venue rules matter, verify the official venue instructions before relying on procedural advice.
 - These skills are prompt/workflow tools, not a substitute for domain expertise or author judgment.
+
+## Quality Bar
+
+This pack is designed to score well on practical usefulness:
+
+- explicit invocation metadata for Codex
+- portable adapters for other agents
+- progressive disclosure through `references/`
+- deterministic helper scripts for fragile checks
+- example prompts and synthetic output
+- eval fixtures and scoring rubric
+- CI validation for metadata and helper scripts

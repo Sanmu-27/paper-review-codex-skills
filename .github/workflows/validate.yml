@@ -14,7 +14,13 @@ jobs:
           python-version: "3.11"
       - name: Validate skill metadata
         run: python scripts/validate_skills.py
+      - name: Check portable docs exist
+        run: |
+          test -f adapters/universal-agent-instructions.md
+          test -f prompts/full-review.md
+          test -f evals/rubric.md
       - name: Compile helper scripts
         run: |
           python -m py_compile ai-paper-review/scripts/audit_tex_submission.py
           python -m py_compile paper-data-auditor/scripts/audit_numbers.py
+          python -m py_compile scripts/validate_skills.py

@@ -6,7 +6,7 @@
 2. Run:
 
 ```powershell
-cd D:\AAA项目\skill
+cd <path-to-this-repo>
 git remote add origin https://github.com/<your-username>/paper-review-codex-skills.git
 git push -u origin main
 git push origin v0.1.0
@@ -16,18 +16,26 @@ git push origin v0.1.0
 
 Use this file as a release asset or manual upload source:
 
-`D:\AAA项目\paper-review-codex-skills-v0.1.0.zip`
+`paper-review-codex-skills-v0.1.0.zip`
 
 ## Option 3: Web upload
 
 If you do not want to use git on the first push:
 
 1. Create an empty repository on GitHub.
-2. Upload the contents of `D:\AAA项目\paper-review-codex-skills-v0.1.0.zip`.
+2. Upload the contents of `paper-review-codex-skills-v0.1.0.zip`.
 3. Commit the uploaded files through the GitHub web UI.
 
 ## Recommended Repo Metadata
 
 - Repository name: `paper-review-codex-skills`
-- Description: `Codex skills for paper review, data auditing, rebuttal planning, artifact checks, and camera-ready polish.`
-- Topics: `codex`, `skills`, `paper-review`, `llm`, `research`, `reproducibility`, `neurips`, `icml`
+- Description: `Portable agent skills for paper review, data auditing, rebuttal planning, artifact checks, and camera-ready polish.`
+- Topics: `codex`, `agents`, `skills`, `paper-review`, `llm`, `research`, `reproducibility`, `neurips`, `icml`
+
+## Suggested GitHub README Badges
+
+After pushing to GitHub, the validation workflow badge can be added to `README.md`:
+
+```markdown
+[![Validate skills](https://github.com/<your-username>/paper-review-codex-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/<your-username>/paper-review-codex-skills/actions/workflows/validate.yml)
+```

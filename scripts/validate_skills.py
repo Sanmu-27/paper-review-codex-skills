@@ -10,6 +10,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_TOP_KEYS = {"name", "description"}
+REQUIRED_REPO_FILES = [
+    "README.md",
+    "SKILLS.md",
+    "LICENSE",
+    "PUBLISH.md",
+    "adapters/README.md",
+    "adapters/universal-agent-instructions.md",
+    "prompts/full-review.md",
+    "prompts/data-audit.md",
+    "prompts/rebuttal.md",
+    "prompts/artifact-audit.md",
+    "prompts/camera-ready.md",
+    "evals/README.md",
+    "evals/rubric.md",
+]
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], list[str]]:
@@ -69,6 +84,11 @@ def validate_skill(path: Path) -> list[str]:
 
 
 def main() -> int:
+    errors: list[str] = []
+    for rel in REQUIRED_REPO_FILES:
+        if not (ROOT / rel).exists():
+            errors.append(f"repo: missing {rel}")
+
     skill_dirs = [
         path for path in ROOT.iterdir()
         if path.is_dir()
@@ -79,7 +99,6 @@ def main() -> int:
         print("No skill directories found.", file=sys.stderr)
         return 1
 
-    errors: list[str] = []
     for path in sorted(skill_dirs):
         errors.extend(validate_skill(path))
 
