@@ -32,6 +32,16 @@ If you do not want to use git on the first push:
 - Description: `Portable agent skills for paper review, data auditing, rebuttal planning, artifact checks, and camera-ready polish.`
 - Topics: `codex`, `agents`, `skills`, `paper-review`, `llm`, `research`, `reproducibility`, `neurips`, `icml`
 
+## Live GitHub Quality Checklist
+
+After the first push:
+
+1. Open the repository homepage and confirm the README renders both images from `assets/`.
+2. Open the Actions tab and wait for `Validate skills` to finish.
+3. Confirm the latest workflow run is green.
+4. Create a release named `v0.1.0` and upload `paper-review-codex-skills-v0.1.0.zip`.
+5. Add the workflow badge below to `README.md` after replacing `<your-username>`.
+
 ## Suggested GitHub README Badges
 
 After pushing to GitHub, the validation workflow badge can be added to `README.md`:

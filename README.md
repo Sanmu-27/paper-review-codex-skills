@@ -4,6 +4,8 @@ A portable skill pack for reviewing, stress-testing, and polishing ML/AI researc
 
 The core format is Codex skills, but the repository also includes cross-agent adapters, reusable prompts, examples, and lightweight evals. The goal is practical paper work rather than generic summarization: conference-style review, experimental number auditing, rebuttal planning, artifact release checks, and camera-ready cleanup.
 
+![Paper Review Skills overview](./assets/showcase-overview.png)
+
 ## Skills
 
 | Skill | Use it for |
@@ -46,11 +48,14 @@ Then choose a task prompt from [`prompts/`](./prompts).
 ## Repo Extras
 
 - [`examples/`](./examples) contains sample prompts and a synthetic output excerpt.
+- [`examples/case-study-paper-review.md`](./examples/case-study-paper-review.md) and [`examples/case-study-artifact-and-rebuttal.md`](./examples/case-study-artifact-and-rebuttal.md) contain anonymous case studies.
 - [`prompts/`](./prompts) contains portable task prompts.
 - [`adapters/`](./adapters) contains instructions for non-Codex agents.
 - [`evals/`](./evals) contains lightweight fixtures and a 20-point scoring rubric.
 - [`scripts/validate_skills.py`](./scripts/validate_skills.py) checks basic skill metadata and prompt wiring.
 - [`.github/workflows/validate.yml`](./.github/workflows/validate.yml) runs validation and script compilation on every push and pull request.
+
+![Anonymous case study output](./assets/case-study-output.png)
 
 ## Suggested Workflow
 

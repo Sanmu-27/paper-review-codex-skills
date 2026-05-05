@@ -24,6 +24,10 @@ REQUIRED_REPO_FILES = [
     "prompts/camera-ready.md",
     "evals/README.md",
     "evals/rubric.md",
+    "examples/case-study-paper-review.md",
+    "examples/case-study-artifact-and-rebuttal.md",
+    "assets/showcase-overview.png",
+    "assets/case-study-output.png",
 ]
 
 

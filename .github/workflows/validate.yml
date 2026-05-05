@@ -19,8 +19,13 @@ jobs:
           test -f adapters/universal-agent-instructions.md
           test -f prompts/full-review.md
           test -f evals/rubric.md
+          test -f examples/case-study-paper-review.md
+          test -f examples/case-study-artifact-and-rebuttal.md
+          test -f assets/showcase-overview.png
+          test -f assets/case-study-output.png
       - name: Compile helper scripts
         run: |
           python -m py_compile ai-paper-review/scripts/audit_tex_submission.py
           python -m py_compile paper-data-auditor/scripts/audit_numbers.py
           python -m py_compile scripts/validate_skills.py
+          python -m py_compile scripts/make_showcase_assets.py
